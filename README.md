@@ -1,7 +1,5 @@
 # 🐛 AI Incident Post-Mortem Generator
 
-## Ahmed Rizk Gawish
- 
 A Full-Stack AI utility designed for Site Reliability Engineers (SREs) and DevOps teams. This application takes chaotic server logs and panicked Slack/Teams conversations and automatically synthesizes them into a highly professional, strictly-formatted Incident Post-Mortem document using Large Language Models.
 
 ## 🚀 Features
