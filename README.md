@@ -16,10 +16,10 @@ A Full-Stack AI utility designed for Site Reliability Engineers (SREs) and DevOp
 
 ## 🛠️ Tech Stack
 - **Frontend / UI**: [Streamlit](https://streamlit.io/)
-- **Backend**: Python 3.12
-- **AI Integrations**: OpenAI SDK / OpenRouter API (`gpt-4o-mini`)
+- **Backend**: FastAPI & Python 3.12
+- **Architecture**: Modular Monolith (Routes, Controllers, Factories)
+- **AI Integrations**: OpenRouter API (`gpt-4o-mini`) via Factory Pattern
 - **Package Management**: `uv`
-- **Infrastructure**: Docker & Continuous Deployment via Render
 
 ---
 
@@ -40,10 +40,20 @@ A Full-Stack AI utility designed for Site Reliability Engineers (SREs) and DevOp
    # Edit .env and paste your OPENROUTER_API_KEY
    ```
 
-3. **Install Dependencies and Run:**
+3. **Install Dependencies:**
    This project uses `uv` for ultra-fast dependency management.
    ```bash
-   uv run streamlit run app.py
+   uv sync
+   ```
+
+4. **Run the Backend API (FastAPI):**
+   ```bash
+   uv run uvicorn src.main:app --reload --port 8000
+   ```
+
+5. **Run the Frontend (Streamlit) in another terminal:**
+   ```bash
+   uv run streamlit run frontend/app.py
    ```
 
 ### Option B: Running with Docker (Production Environment)

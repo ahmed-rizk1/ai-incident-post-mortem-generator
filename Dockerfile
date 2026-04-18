@@ -16,5 +16,4 @@ COPY . .
 # 6. Expose port 8501 so the outside world can talk to Streamlit inside the box
 EXPOSE 8501
 
-# 7. The command that runs when the container starts
-CMD ["streamlit", "run", "app.py", "--server.address=0.0.0.0"]
+# 7. No default CMD, docker-compose will override depending on the service
